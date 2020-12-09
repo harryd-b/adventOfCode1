@@ -82,6 +82,7 @@ class Passport:
         else:
             return 0
 
+
 def populate_from_raw():
     passport_map = []
     load_file_to_list('venv/Include/ppt.txt', passport_map)
