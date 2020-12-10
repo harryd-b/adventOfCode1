@@ -1,10 +1,5 @@
 from file import load_file_to_list
 import re
-
-'''
-
-
-'''
 bag_type_count = 0
 recursion_level = 0
 no_repeat = []
@@ -12,7 +7,6 @@ no_repeat = []
 bag_type_count_1 = 0
 recursion_level_1 = 0
 total_bags = 0
-no_repeat_1 = []
 
 
 def recursive_bag_search(bag_list, bag_type):
@@ -53,7 +47,6 @@ def recursive_bag_search_1(bag_list, bag_type, bag_count):
 
             # now we need to get the number at the beginning of each bag_type
             for j in range(len(inner_bag_list)):
-                # print(inner_bag_list[j][2:].replace("bags", "").replace("bag", "")) remove the number from the
                 # beginning (only works with single digits) and bag or bags from the end
                 my_bag_type = inner_bag_list[j][2:].replace(" bags", "").replace(" bag", "")
                 if my_bag_type == " other":
@@ -63,7 +56,6 @@ def recursive_bag_search_1(bag_list, bag_type, bag_count):
                 total_bags += new_bag_count
 
                 recursive_bag_search_1(bag_list, my_bag_type, new_bag_count)
-                no_repeat_1.append(outer_bag)
 
 
 def pack_bags_and_search():

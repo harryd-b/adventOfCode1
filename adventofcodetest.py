@@ -1,5 +1,4 @@
 import unittest
-from file import load_file_to_list
 from trees import count_trees_on_slope_1
 from ppt import *
 
