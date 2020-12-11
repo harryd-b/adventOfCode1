@@ -11,7 +11,6 @@ def load_and_boot():
 
 def boot_bug_finder():
     instruction_list = []
-    test_instruction_list = []
     path = 'venv/Include/code.txt'
     load_file_to_list(path, instruction_list)
     i = 0
