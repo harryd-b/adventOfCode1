@@ -1,6 +1,5 @@
 import re
-
-debug_on = 1
+log_level = 1
 
 
 def remove(my_list):
@@ -9,6 +8,7 @@ def remove(my_list):
     return my_list
 
 
-def print_debug(message):
+def print_debug(message, debug_on=1):
     if debug_on == 1:
-        print(message)
+        if log_level >= 1:
+            print(message)

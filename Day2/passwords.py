@@ -1,14 +1,17 @@
+from Util.util import print_debug
+
+
 class Passwords:
 
     @staticmethod
-    def check_pwd(pwd, low_num, hi_num, chk_char):
+    def __check_pwd__(pwd, low_num, hi_num, chk_char):
         if int(low_num) <= pwd.count(chk_char) <= int(hi_num):
             return 1
         else:
             return 0
 
     @staticmethod
-    def check_pwd_1(pwd, low_num, hi_num, chk_char):
+    def __check_pwd_1__(pwd, low_num, hi_num, chk_char):
         char_list = list(pwd)
 
         if char_list[int(low_num) - 1] == chk_char:
@@ -22,7 +25,7 @@ class Passwords:
             return 0
 
     @staticmethod
-    def split_data(password):
+    def __split_data__(password):
         first_split = password.split(": ")
         password = first_split[1]
         second_split = first_split[0].split(" ")
@@ -36,9 +39,9 @@ class Passwords:
     def check_all(passwords_list, part):
         counter = 0
         for i in range(len(passwords_list)):
-            check_list = Passwords.split_data(passwords_list[i])
+            check_list = Passwords.__split_data__(passwords_list[i])
             if part == 1:
-                counter += Passwords.check_pwd(check_list[0], check_list[1], check_list[2], check_list[3])
+                counter += Passwords.__check_pwd__(check_list[0], check_list[1], check_list[2], check_list[3])
             else:
-                counter += Passwords.check_pwd_1(check_list[0], check_list[1], check_list[2], check_list[3])
+                counter += Passwords.__check_pwd_1__(check_list[0], check_list[1], check_list[2], check_list[3])
         return counter
