@@ -8,7 +8,7 @@ class Passport:
     pid = ""  # (Passport ID)
     cid = ""  # (Country ID)
 
-    def is_passport_valid(self):
+    def is_passport_valid_2(self):
         if self.byr != "" and self.iyr != "" and self.eyr != "" and self.hgt != "" and self.hcl != "" and self.ecl != "":
             if self.pid != "" and self.check_byr() and self.check_eyr() and self.check_iyr() and self.check_hgt():
                 if self.check_hcl() and self.check_ecl() and self.check_pid():
@@ -20,9 +20,17 @@ class Passport:
         else:
             return 0
 
+    def is_passport_valid_1(self):
+        if self.byr != "" and self.iyr != "" and self.eyr != "" and self.hgt != "":
+            if self.pid != "" and self.hcl != "" and self.ecl != "":
+                return 1
+            else:
+                return 0
+        else:
+            return 0
+
     def check_byr(self):
         if 2002 >= int(self.byr) >= 1920:
-            # print(self.byr)
             return 1
         else:
             return 0
@@ -73,7 +81,6 @@ class Passport:
             return 0
 
     def check_pid(self):
-        print(self.pid)
         if self.pid.isnumeric() and len(self.pid) == 9:
             return 1
         else:

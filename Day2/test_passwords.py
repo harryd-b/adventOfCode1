@@ -1,10 +1,21 @@
-import unittest
-from Util.file import load_file_to_list
-from Day2.passwords import Passwords
+from unittest import TestCase
 from Util.util import print_debug
+from Day2.passwords import Passwords
+from Util.file import load_file_to_list
 
 
-class MyTestCase(unittest.TestCase):
+class TestPasswords(TestCase):
+    def test_check_pwd(self):
+        self.fail()
+
+    def test_check_pwd_1(self):
+        self.fail()
+
+    def test_split_data(self):
+        self.fail()
+
+    def test_check_all(self):
+        self.fail()
 
     def test_passwords_part_1(self):
         passwords_list = []
@@ -24,7 +35,3 @@ class MyTestCase(unittest.TestCase):
         print_debug(part_2)
 
         self.assertEqual(part_2, 686)
-
-
-if __name__ == '__main__':
-    unittest.main()
