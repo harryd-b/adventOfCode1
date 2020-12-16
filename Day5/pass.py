@@ -1,4 +1,4 @@
-from file import load_file_to_list
+from Util.file import load_file_to_list
 
 
 def get_row(key):
@@ -39,7 +39,7 @@ def get_column(key):
 
 def load_loop():
     pass_map = []
-    load_file_to_list('venv/Include/pass.txt', pass_map)
+    load_file_to_list('../venv/Include/pass.txt', pass_map)
     rows = []
     columns = []
     seats = []

@@ -1,7 +1,7 @@
 # Python3 program to find all pairs in
 # a list of integers with given sum
 from itertools import combinations
-from file import load_file_to_list
+from Util.file import load_file_to_list
 import copy
 
 
@@ -59,7 +59,7 @@ def findSublist(xmas_list, my_sum):
 
 if __name__ == '__main__':
     xmas_data = []
-    path = 'venv/Include/xmas.txt'
+    path = '../venv/Include/xmas.txt'
     load_file_to_list(path, xmas_data)
     print("Day 8: Part 1:")
     loop_through_set(xmas_data)

@@ -1,17 +1,17 @@
-from file import load_file_to_list
+from Util.file import load_file_to_list
 import copy
 
 
 def load_and_boot():
     instruction_list = []
-    path = 'venv/Include/code.txt'
+    path = '../venv/Include/code.txt'
     load_file_to_list(path, instruction_list)
     boot(instruction_list)
 
 
 def boot_bug_finder():
     instruction_list = []
-    path = 'venv/Include/code.txt'
+    path = '../venv/Include/code.txt'
     load_file_to_list(path, instruction_list)
     i = 0
     test_instruction_list = copy.deepcopy(instruction_list)

@@ -1,4 +1,4 @@
-from file import load_file_to_list
+from Util.file import load_file_to_list
 import re
 bag_type_count = 0
 recursion_level = 0
@@ -59,7 +59,7 @@ def recursive_bag_search_1(bag_list, bag_type, bag_count):
 
 
 def pack_bags_and_search():
-    path = 'venv/Include/bags.txt'
+    path = '../venv/Include/bags.txt'
     bag_list = []
 
     load_file_to_list(path, bag_list)

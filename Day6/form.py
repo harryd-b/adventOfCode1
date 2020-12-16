@@ -1,11 +1,11 @@
-from file import load_file_to_list
+from Util.file import load_file_to_list
 
 # needs refactoring
 
 
 def load_loop():
     form_map = []
-    load_file_to_list('venv/Include/form.txt', form_map)
+    load_file_to_list('../venv/Include/form.txt', form_map)
 
     group_count = 0
     group_form_list = []
