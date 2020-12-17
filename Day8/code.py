@@ -2,7 +2,7 @@ from Util.file import load_file_to_list
 import copy
 
 
-class Boot:
+class Boots:
     accumulator = 0
 
     def boot_bug_finder(self, instruction_list):
